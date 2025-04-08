@@ -4,28 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pick a Number Game</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Pick a Number (1-55)</h1>
-    <div class="player-info">
-      <input type="text" id="playerName" placeholder="Enter your name" />
-      <button onclick="joinGame()">Join Game</button>
-    </div>
-    <div id="questionBox" class="hidden">
-      <p id="currentQuestion"></p>
-      <textarea id="answerInput" placeholder="Your answer..."></textarea>
-      <button onclick="submitAnswer()">Submit Answer</button>
-    </div>
-    <div id="grid" class="grid"></div>
-    <div id="answerBox" class="hidden">
-      <h3>Answer from other player:</h3>
-      <p id="showAnswer"></p>
-    </div>
+  <h1>🎯 Pick a Number Game</h1>
+  <div id="number-grid"></div>
+
+  <div id="question-section">
+    <h2 id="question">Pick a number to start!</h2>
+    <input type="text" id="answer" placeholder="Type your answer here..." />
+    <button id="submit">Submit</button>
   </div>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+  <div id="log" class="chat-log"></div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  
+  <!-- Game Logic -->
   <script src="script.js"></script>
 </body>
 </html>
