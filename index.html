@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pick a Number Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Pick a Number for Me!</h1>
+    <div id="turnDisplay">Current Turn: <span id="currentUser">User 1</span></div>
+    <div class="grid" id="numberGrid"></div>
+    <div id="questionBox" class="hidden">
+      <p id="questionText"></p>
+      <textarea id="answerInput" rows="3" placeholder="Type your answer..."></textarea>
+      <button id="submitAnswer">Submit Answer</button>
+    </div>
+    <div id="log"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
