@@ -4,20 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pick a Number Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>🎲 Pick a Number for Me!</h1>
-    <div id="turnDisplay">Current Turn: <span id="currentUser">User 1</span></div>
-    <div class="grid" id="numberGrid"></div>
-    <div id="questionBox" class="hidden">
-      <p id="questionText"></p>
-      <textarea id="answerInput" rows="3" placeholder="Type your answer..."></textarea>
-      <button id="submitAnswer">Submit Answer</button>
+    <h1>Pick a Number (1-55)</h1>
+    <div class="player-info">
+      <input type="text" id="playerName" placeholder="Enter your name" />
+      <button onclick="joinGame()">Join Game</button>
     </div>
-    <div id="log"></div>
+    <div id="questionBox" class="hidden">
+      <p id="currentQuestion"></p>
+      <textarea id="answerInput" placeholder="Your answer..."></textarea>
+      <button onclick="submitAnswer()">Submit Answer</button>
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="answerBox" class="hidden">
+      <h3>Answer from other player:</h3>
+      <p id="showAnswer"></p>
+    </div>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
